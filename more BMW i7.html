@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .slider-container {
+            display: flex;
+            transition: transform 1s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+        }
+        .slide img {
+            width: 1000px; /* Make images fill their container */
+            height: auto; /* Maintain aspect ratio */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slider-container">
+        <div class="slide"><img src="http://surl.li/phtev"></img></div>
+        <div class="slide"><img src="http://surl.li/phtfh"></img></div>
+        <div class="slide"><img src="http://surl.li/phtfs"></img></div>
+        <div class="slide"><img src="http://surl.li/phtgo"></img></div>
+        <!-- Add more slides as needed -->
+    </div>
+
+    <script>
+        // JavaScript for sliding images
+        const slider = document.querySelector('.slider-container');
+        let count = 0;
+
+        function nextSlide() {
+            count++;
+            if (count >= document.querySelectorAll('.slide').length) {
+                count = 0;
+            }
+            updateSlider();
+        }
+
+        function updateSlider() {
+            const translateValue = -count * 100 + '%';
+            slider.style.transform = 'translateX(' + translateValue + ')';
+        }
+
+        // Change slide every 3 seconds (adjust as needed)
+        setInterval(nextSlide, 3000);
+    </script>
+</body>
+
+</html>

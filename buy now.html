@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In / Sign Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #3be7df;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+
+        .tab {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .tab button {
+            cursor: pointer;
+            border: none;
+            padding: 10px;
+            flex: 1;
+            background-color: transparent;
+            font-size: 16px;
+            border-bottom: 2px solid #ccc;
+            outline: none;
+        }
+
+        .tab button.active {
+            border-bottom: 2px solid #007bff;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="tab">
+            <button id="signInTab" class="active" onclick="changeTab('signIn')">Sign In</button>
+            <button id="signUpTab" onclick="changeTab('signUp')">Sign Up</button>
+        </div>
+
+        <div id="signInForm" class="form-group">
+            <input type="text" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button onclick="signIn()">Sign In</button>
+        </div>
+
+        <div id="signUpForm" class="form-group" style="display: none;">
+            <input type="text" placeholder="Full Name">
+            <input type="text" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button onclick="signUp()">Sign Up</button>
+        </div>
+    </div>
+
+    <script>
+        function changeTab(tab) {
+            if (tab === 'signIn') {
+                document.getElementById('signInTab').classList.add('active');
+                document.getElementById('signUpTab').classList.remove('active');
+                document.getElementById('signInForm').style.display = 'block';
+                document.getElementById('signUpForm').style.display = 'none';
+            } else if (tab === 'signUp') {
+                document.getElementById('signInTab').classList.remove('active');
+                document.getElementById('signUpTab').classList.add('active');
+                document.getElementById('signInForm').style.display = 'none';
+                document.getElementById('signUpForm').style.display = 'block';
+            }
+        }
+
+        function signIn() {
+            // Add authentication logic here
+            alert('Sign In clicked');
+        }
+
+        function signUp() {
+            // Add registration logic here
+            alert('Sign Up clicked');
+        }
+    </script>
+
+</body>
+</html>

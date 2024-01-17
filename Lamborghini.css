@@ -10,6 +10,17 @@ header {
     padding: 10px 0;
     text-align: center;
 }
+.card {
+    background-color: white;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    margin: 15px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
 nav {
     background-color: #333;
     color: #fff;

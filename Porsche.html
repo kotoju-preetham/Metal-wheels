@@ -14,13 +14,22 @@
         }
         .car {
             border: 1px solid #ccc;
-            padding: 10px;
+            border-radius: 8px;
+            padding: 20px;
             margin-bottom: 20px;
+            background-color: #fff;
         }
-        img {
-            max-width: 100%;
+        section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .car img {
+            max-width: 500px;
             height: auto;
+            border-radius: 8px;
         }
+        
         .price {
             color: #c00;
             font-weight: bold;
@@ -33,10 +42,19 @@
             padding: 10px;
             cursor: pointer;
         }
+        footer {
+    background-color: #c00;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
     </style>
 </head>
 <body>
-
+    <section>
     <h1>Porsche</h1>
 
     <div class="car">
@@ -62,6 +80,7 @@
         <button><a href="buy now.html">Buy Now</a></button>
         <button><a href="https://www.porsche.com/international/models/cayenne/">More Information</a></button>
     </div>
+   </section>
     <footer>
         &copy; 2024 BMW. All rights reserved.
     </footer>

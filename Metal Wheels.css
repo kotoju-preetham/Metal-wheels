@@ -41,3 +41,12 @@
             border: 5px solid black;
             cursor: pointer;
         }
+.Contact-button {
+            background-color: #fff;
+            color: #111;
+            font-family: 'Lucida Console', 'Lucida Sans Typewriter', monaco, 'Bitstream Vera Sans Mono', monospace;
+            font-size: 15px;
+            padding: 10px 20px;
+            border: 5px solid #fff;
+            cursor: pointer;
+        }

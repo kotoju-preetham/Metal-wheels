@@ -45,6 +45,8 @@ nav {
     color: #fff;
     padding: 10px 0;
     text-align: center;
+    position: fixed;
+    bottom: 0;
 }
 .card img {
     width: 100%;
@@ -70,7 +72,5 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
-    position: fixed;
-    bottom: 0;
     width: 100%;
 }

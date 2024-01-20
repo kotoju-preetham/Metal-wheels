@@ -27,8 +27,8 @@
             justify-content: center;
         }
         .slide img {
-            width: 1000px; /* Make images fill their container */
-            height: auto; /* Maintain aspect ratio */
+            width: 1000px; 
+            height: auto; 
         }
     </style>
 </head>
@@ -43,7 +43,6 @@
     </div>
 
     <script>
-        // JavaScript for sliding images
         const slider = document.querySelector('.slider-container');
         let count = 0;
 
@@ -60,7 +59,7 @@
             slider.style.transform = 'translateX(' + translateValue + ')';
         }
 
-        // Change slide every 3 seconds (adjust as needed)
+    
         setInterval(nextSlide, 3000);
     </script>
 </body>
